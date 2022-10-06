@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e47a4c47-8814-41c8-ad3b-cf8af6395b66" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FutureGames_3CWorkshop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FutureGames_3CWorkshop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Vitor/Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Vitor/Item.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.4.3/Simple Demo/SimpleControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Input System/1.4.3/Simple Demo/SimpleControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.4.3/Simple Demo/SimpleControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Input System/1.4.3/Simple Demo/SimpleControls.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Vitor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Vitor.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials_Corentin/Bullet.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials_Corentin/Bullet.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Corentin.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Corentin.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Corentin/Shoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Corentin/Shoot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +80,7 @@
       <updated>1664967576228</updated>
       <workItem from="1664967582646" duration="1000" />
       <workItem from="1664967623182" duration="1785000" />
-      <workItem from="1665055821222" duration="2236000" />
+      <workItem from="1665055821222" duration="2836000" />
     </task>
     <servers />
   </component>
