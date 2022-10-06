@@ -5,8 +5,29 @@ using UnityEngine.InputSystem;
 
 public class Shoot : MonoBehaviour
 {
+    private InputAction fire;
+    private CharacterController controller;
+    public PlayerInputActions playerControls;
+    
+    void Awake()
+    {
+        playerControls = new PlayerInputActions();
+    }
+    
+    void Start()
+    {
+        controller = gameObject.GetComponent<CharacterController>();
+    }
+    
     void Update()
     {
-        if (Inp)
+        fire = playerControls.Player.Fire;
+        fire.Enable();
+        fire.performed += Fire;
+    }
+
+    private void Fire(InputAction.CallbackContext context)
+    {
+        Debug.Log("I am firing !");
     }
 }
