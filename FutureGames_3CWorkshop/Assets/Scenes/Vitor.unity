@@ -688,6 +688,20 @@ MonoBehaviour:
   maxDashTime: 1
   dashDistance: 300
   gun: {fileID: 995813224}
+--- !u!114 &493070762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493070748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aaee6b445181144fb9d6f817d905319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5512358453457517228, guid: c4ed118eadee6b047811cada28a7e9e7, type: 3}
+  gunPosition: {fileID: 968500279}
 --- !u!1 &529902650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,6 +1876,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &968500279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2737791783069023529, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+  m_PrefabInstance: {fileID: 2737791784066608047}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &995813224 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2737791783816450520, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
@@ -2073,7 +2092,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38586
+  m_Name: pb_Mesh24640
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

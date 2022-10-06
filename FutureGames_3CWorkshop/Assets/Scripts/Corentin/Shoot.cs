@@ -8,11 +8,11 @@ public class Shoot : MonoBehaviour
 
     private InputAction fire;
     private CharacterController controller;
-    public PlayerInputActions playerControls;
+  //  public PlayerInputActions playerControls;
     
     void Awake()
     {
-        playerControls = new PlayerInputActions();
+       // playerControls = new PlayerInputActions();
     }
     
     void Start()
@@ -22,7 +22,7 @@ public class Shoot : MonoBehaviour
     
     void Update()
     {
-        fire = playerControls.Player.Fire;
+       // fire = playerControls.Player.Fire;
         fire.Enable();
         fire.performed += Fire;
     }
