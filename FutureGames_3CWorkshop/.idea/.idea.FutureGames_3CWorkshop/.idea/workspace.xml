@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e47a4c47-8814-41c8-ad3b-cf8af6395b66" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FutureGames_3CWorkshop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FutureGames_3CWorkshop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.4.3/Simple Demo/SimpleControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Input System/1.4.3/Simple Demo/SimpleControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.4.3/Simple Demo/SimpleControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Input System/1.4.3/Simple Demo/SimpleControls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Vitor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Vitor.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vitor/Dash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Vitor/Dash.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vitor/HealthItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Vitor/HealthItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +33,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -68,6 +80,7 @@
       <updated>1664967576228</updated>
       <workItem from="1664967582646" duration="1000" />
       <workItem from="1664967623182" duration="1785000" />
+      <workItem from="1665055821222" duration="775000" />
     </task>
     <servers />
   </component>

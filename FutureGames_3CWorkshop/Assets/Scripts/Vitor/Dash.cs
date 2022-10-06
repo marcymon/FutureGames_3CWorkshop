@@ -9,7 +9,7 @@ public class Dash : MonoBehaviour
     private Transform playerBody;
     private PlayerMovementController playerMovement;
     public float maxDashTime = 1f;
-    public float dashDistance = 30f;
+    public float dashDistance = 300f;
     private float dashSpeedOnStop = 0.1f;
     private float currentDashTime;
     private float dashSpeed = 6f;

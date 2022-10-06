@@ -7,7 +7,11 @@ public class HealthItem : MonoBehaviour
 {
    public void OnCollisionEnter(Collision collision)
    {
-      Destroy(gameObject);
-      Debug.LogError("yeah! You picked " + name);
+      if(collision.gameObject.CompareTag("Player"))
+      {
+         Destroy(gameObject);
+         Debug.LogError("yeah! You picked " + name);
+      }
+      
    }
 }
