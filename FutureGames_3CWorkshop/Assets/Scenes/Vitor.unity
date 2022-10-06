@@ -686,7 +686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDashTime: 1
-  dashDistance: 30
+  dashDistance: 300
   gun: {fileID: 995813224}
 --- !u!1 &529902650
 GameObject:

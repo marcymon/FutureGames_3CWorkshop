@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 
 public class Shoot : MonoBehaviour
 {
-    void Update()
+    /*void Update()
     {
         if (Inp)
-    }
+    }*/
 }

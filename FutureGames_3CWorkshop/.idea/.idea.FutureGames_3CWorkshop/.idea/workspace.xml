@@ -6,17 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="e47a4c47-8814-41c8-ad3b-cf8af6395b66" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FutureGames_3CWorkshop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FutureGames_3CWorkshop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Vitor/Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Vitor/Item.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.4.3/Simple Demo/SimpleControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Input System/1.4.3/Simple Demo/SimpleControls.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Samples/Input System/1.4.3/Simple Demo/SimpleControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Input System/1.4.3/Simple Demo/SimpleControls.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Vitor.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Vitor.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vitor/Dash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Vitor/Dash.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vitor/HealthItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Vitor/HealthItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Corentin/Shoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Corentin/Shoot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Corentin/Shoot.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -80,7 +82,7 @@
       <updated>1664967576228</updated>
       <workItem from="1664967582646" duration="1000" />
       <workItem from="1664967623182" duration="1785000" />
-      <workItem from="1665055821222" duration="775000" />
+      <workItem from="1665055821222" duration="2236000" />
     </task>
     <servers />
   </component>
