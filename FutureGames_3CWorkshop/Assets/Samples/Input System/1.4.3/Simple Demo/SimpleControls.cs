@@ -62,6 +62,15 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shield"",
+                    ""type"": ""Button"",
+                    ""id"": ""358da3dd-3fff-4b1e-97f5-e84b9066fac2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -196,6 +205,28 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                     ""action"": ""dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6a65579d-3a92-4e08-8d80-c31148174c94"",
+                    ""path"": ""<XInputController>{Player1}/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shield"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""51430ebc-c9b9-42cf-94e8-09506b4f7b17"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shield"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -208,6 +239,7 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
         m_gameplay_move = m_gameplay.FindAction("move", throwIfNotFound: true);
         m_gameplay_look = m_gameplay.FindAction("look", throwIfNotFound: true);
         m_gameplay_dash = m_gameplay.FindAction("dash", throwIfNotFound: true);
+        m_gameplay_Shield = m_gameplay.FindAction("Shield", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -271,6 +303,7 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_gameplay_move;
     private readonly InputAction m_gameplay_look;
     private readonly InputAction m_gameplay_dash;
+    private readonly InputAction m_gameplay_Shield;
     public struct GameplayActions
     {
         private @SimpleControls m_Wrapper;
@@ -279,6 +312,7 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
         public InputAction @move => m_Wrapper.m_gameplay_move;
         public InputAction @look => m_Wrapper.m_gameplay_look;
         public InputAction @dash => m_Wrapper.m_gameplay_dash;
+        public InputAction @Shield => m_Wrapper.m_gameplay_Shield;
         public InputActionMap Get() { return m_Wrapper.m_gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -300,6 +334,9 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                 @dash.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDash;
                 @dash.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDash;
                 @dash.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDash;
+                @Shield.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnShield;
+                @Shield.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnShield;
+                @Shield.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnShield;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -316,6 +353,9 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                 @dash.started += instance.OnDash;
                 @dash.performed += instance.OnDash;
                 @dash.canceled += instance.OnDash;
+                @Shield.started += instance.OnShield;
+                @Shield.performed += instance.OnShield;
+                @Shield.canceled += instance.OnShield;
             }
         }
     }
@@ -326,5 +366,6 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+        void OnShield(InputAction.CallbackContext context);
     }
 }

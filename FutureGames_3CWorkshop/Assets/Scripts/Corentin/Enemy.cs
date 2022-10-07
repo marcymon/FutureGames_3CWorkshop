@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
 
     public Transform facing;
     public Vector3 playerPosition;
+    public int enemyDamage = 20;
     
     void Update()
     {
@@ -28,8 +29,9 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(15);
+            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
         }
+
     }
 
 }
