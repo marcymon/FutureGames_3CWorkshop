@@ -33,7 +33,7 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                     ""id"": ""1077f913-a9f9-41b1-acb3-b9ee0adbc744"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Tap,SlowTap"",
+                    ""interactions"": ""Tap,SlowTap,Hold"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -53,13 +53,33 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""3cd9c49f-2a0d-44f1-a569-28d7d0b11e87"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""abb776f3-f329-4f7b-bbf8-b577d13be018"",
-                    ""path"": ""*/{PrimaryAction}"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4da7cc10-4e37-4d95-90c7-867dfc47dbd5"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -154,6 +174,28 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                     ""action"": ""look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""87946e17-050f-4ab3-93f1-a36a0f1465f1"",
+                    ""path"": ""<Keyboard>/alt"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""84c7b9b9-80df-4097-8d46-cc87746ccbb9"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -165,6 +207,7 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
         m_gameplay_fire = m_gameplay.FindAction("fire", throwIfNotFound: true);
         m_gameplay_move = m_gameplay.FindAction("move", throwIfNotFound: true);
         m_gameplay_look = m_gameplay.FindAction("look", throwIfNotFound: true);
+        m_gameplay_dash = m_gameplay.FindAction("dash", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -227,6 +270,7 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_gameplay_fire;
     private readonly InputAction m_gameplay_move;
     private readonly InputAction m_gameplay_look;
+    private readonly InputAction m_gameplay_dash;
     public struct GameplayActions
     {
         private @SimpleControls m_Wrapper;
@@ -234,6 +278,7 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
         public InputAction @fire => m_Wrapper.m_gameplay_fire;
         public InputAction @move => m_Wrapper.m_gameplay_move;
         public InputAction @look => m_Wrapper.m_gameplay_look;
+        public InputAction @dash => m_Wrapper.m_gameplay_dash;
         public InputActionMap Get() { return m_Wrapper.m_gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -252,6 +297,9 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                 @look.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLook;
                 @look.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLook;
                 @look.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnLook;
+                @dash.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDash;
+                @dash.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDash;
+                @dash.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDash;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -265,6 +313,9 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                 @look.started += instance.OnLook;
                 @look.performed += instance.OnLook;
                 @look.canceled += instance.OnLook;
+                @dash.started += instance.OnDash;
+                @dash.performed += instance.OnDash;
+                @dash.canceled += instance.OnDash;
             }
         }
     }
@@ -274,5 +325,6 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
         void OnFire(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
     }
 }
