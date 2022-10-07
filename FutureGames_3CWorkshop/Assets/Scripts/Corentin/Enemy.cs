@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
 
     public Transform facing;
     public Vector3 playerPosition;
-    public int enemyDamage = 20;
+    public float enemyDamage = 20;
     
     void Update()
     {
