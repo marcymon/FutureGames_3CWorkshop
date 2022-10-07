@@ -700,8 +700,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aaee6b445181144fb9d6f817d905319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5512358453457517228, guid: c4ed118eadee6b047811cada28a7e9e7, type: 3}
-  gunPosition: {fileID: 968500279}
+  bullet: {fileID: -8976816967383151668, guid: c4ed118eadee6b047811cada28a7e9e7, type: 3}
+  gunPosition: {fileID: 968500280}
+  speed: 30
 --- !u!1 &529902650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1876,9 +1877,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &968500279 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2737791783069023529, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+--- !u!4 &968500280 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2737791783069023528, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
   m_PrefabInstance: {fileID: 2737791784066608047}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &995813224 stripped
@@ -7698,6 +7699,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2737791783816450518, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2737791784416854540, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: m_Camera
       value: 

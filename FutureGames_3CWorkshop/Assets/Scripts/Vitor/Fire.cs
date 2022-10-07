@@ -8,7 +8,8 @@ public class Fire : MonoBehaviour
     private CharacterController controller;
     private bool fire;
     [SerializeField] private GameObject bullet;
-    [SerializeField] private GameObject gunPosition;
+    [SerializeField] private Transform gunPosition;
+    public float speed = 30f;
     
     // Start is called before the first frame update
     void Start()
@@ -19,18 +20,18 @@ public class Fire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (fire)
-        {
-            Vector3 force = transform.forward * 500f;
-        }
+      
+
+        
     }
 
       void OnFire(InputValue value)
     {
         fire = value.isPressed;
-        GameObject newBullet = Instantiate(bullet);
-        newBullet.transform.position = gunPosition.transform.position;
-        newBullet.GetComponent<Projectile>();
+        
+        GameObject newBullet = Instantiate(bullet, gunPosition.position, gunPosition.rotation);
+        
+        
         
         Debug.Log("I am firing !");
     }

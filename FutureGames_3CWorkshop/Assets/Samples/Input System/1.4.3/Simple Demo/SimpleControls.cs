@@ -33,7 +33,7 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                     ""id"": ""1077f913-a9f9-41b1-acb3-b9ee0adbc744"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Tap,SlowTap"",
+                    ""interactions"": ""Tap,SlowTap,Hold"",
                     ""initialStateCheck"": false
                 },
                 {
