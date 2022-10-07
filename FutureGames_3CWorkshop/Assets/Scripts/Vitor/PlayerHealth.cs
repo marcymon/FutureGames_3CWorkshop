@@ -19,6 +19,11 @@ public class PlayerHealth : MonoBehaviour
     
     public void TakeDamage(float damage)
     {
+        if(shield.deffending)
+        {
+            float shieldProtection = damage /2;
+            currentHealth -= (shieldProtection - (damage / 3));
+        }
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
       

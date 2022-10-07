@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 public class Shield : MonoBehaviour
 {
     public bool deffending;
-    [SerializeField] GameObject shielding;
+    public float timer;
+   [SerializeField] GameObject shielding;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -15,22 +16,33 @@ public class Shield : MonoBehaviour
              if (deffending)
             {
                 IsDeffending(true);
+                Debug.LogError("im deffending");
             }
+            Debug.LogError("oops");
         }
 
         
     }
 
+    private void Update()
+    {
+        if(deffending)
+        {
+            timer += Time.deltaTime;
+            if (timer >= 5f)
+            {
+                shielding.SetActive(false);
+                timer = 0;
+            }
+        }
+    }
+
+
     public void IsDeffending(bool shield)
     {
-        if (deffending)
-        {
+       
             shield = true;
-            shielding.SetActive(true);
-        }
-
-        shield = false;
-        shielding.SetActive(false);
+            
         
     }
 
@@ -39,6 +51,9 @@ public class Shield : MonoBehaviour
     void OnShield(InputValue value)
     {
        deffending = value.isPressed;
+        shielding.SetActive(true);
+
+        
 
 
     }

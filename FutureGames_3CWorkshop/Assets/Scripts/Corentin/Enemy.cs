@@ -25,11 +25,11 @@ public class Enemy : MonoBehaviour
 
     
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
         }
 
     }

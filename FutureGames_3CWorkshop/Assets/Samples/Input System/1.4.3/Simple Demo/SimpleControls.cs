@@ -98,6 +98,17 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""a1dbda1f-07ba-4700-a035-e626a257fc49"",
+                    ""path"": ""<SwitchProControllerHID>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""e1b8c4dd-7b3a-4db6-a93a-0889b59b1afc"",
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
@@ -208,8 +219,19 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""30ba2bcd-3078-4823-9fbc-7780b7b169a0"",
+                    ""path"": ""<SwitchProControllerHID>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""6a65579d-3a92-4e08-8d80-c31148174c94"",
-                    ""path"": ""<XInputController>{Player1}/leftShoulder"",
+                    ""path"": ""<XInputController>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -220,7 +242,18 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""51430ebc-c9b9-42cf-94e8-09506b4f7b17"",
-                    ""path"": ""<Mouse>/rightButton"",
+                    ""path"": ""<SwitchProControllerHID>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shield"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""339f7713-36d9-4e67-9e29-790dd5e4187a"",
+                    ""path"": ""<Keyboard>/c"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

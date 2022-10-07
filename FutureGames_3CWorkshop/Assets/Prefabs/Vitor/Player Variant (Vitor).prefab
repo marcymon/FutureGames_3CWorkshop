@@ -222,7 +222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2737791784416854542, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2737791784416854542, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: m_LocalPosition.x
@@ -270,7 +270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2737791784416854579, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player Variant (Vitor)
       objectReference: {fileID: 0}
     - target: {fileID: 2737791784416854579, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
       propertyPath: m_Layer
@@ -300,7 +300,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432477056229232760}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -335,7 +335,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: -8976816967383151668, guid: c4ed118eadee6b047811cada28a7e9e7, type: 3}
   gunPosition: {fileID: 1432477057557294947}
-  speed: 30
 --- !u!4 &1432477057557294947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2737791783069023528, guid: 86f1967622fbece4eabcd0652b325176, type: 3}
