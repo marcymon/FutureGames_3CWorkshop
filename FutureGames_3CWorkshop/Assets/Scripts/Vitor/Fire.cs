@@ -9,7 +9,6 @@ public class Fire : MonoBehaviour
     private bool fire;
     [SerializeField] private GameObject bullet;
     [SerializeField] private Transform gunPosition;
-    public float speed = 30f;
     
     // Start is called before the first frame update
     void Start()
