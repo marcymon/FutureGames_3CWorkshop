@@ -614,6 +614,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1432477056229232709, guid: 244e417eccd68f34b9465163bfdc5be7, type: 3}
   m_PrefabInstance: {fileID: 1432477056541882852}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &493070761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493070748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e50202bb0d7c57b4c949e22d510ea244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
 --- !u!1 &529902650
 GameObject:
   m_ObjectHideFlags: 0
@@ -7477,7 +7491,7 @@ GameObject:
   - component: {fileID: 2033124196}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
