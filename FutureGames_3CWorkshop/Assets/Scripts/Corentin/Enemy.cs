@@ -21,5 +21,15 @@ public class Enemy : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, followPlayer.transform.position,
             speedPosition * Time.deltaTime);
     }
+
     
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(15);
+        }
+    }
+
 }
