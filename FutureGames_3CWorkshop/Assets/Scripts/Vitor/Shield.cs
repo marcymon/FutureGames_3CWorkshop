@@ -8,21 +8,7 @@ public class Shield : MonoBehaviour
     public bool deffending;
     public float timer;
    [SerializeField] GameObject shielding;
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.CompareTag("Enemy"))
-        {
-             if (deffending)
-            {
-                IsDeffending(true);
-                Debug.LogError("im deffending");
-            }
-            Debug.LogError("oops");
-        }
-
-        
-    }
+    
 
     private void Update()
     {
