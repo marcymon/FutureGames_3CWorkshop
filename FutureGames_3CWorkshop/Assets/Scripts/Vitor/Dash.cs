@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class Dash : MonoBehaviour
 {
+    // Script for dashing. The variables will be explained on the update.
+
     private CharacterController controller;
     private Transform playerBody;
     private PlayerMovementController playerMovement;
@@ -22,7 +24,7 @@ public class Dash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controller = gameObject.GetComponent<CharacterController>();
+        controller = gameObject.GetComponent<CharacterController>();               // im not sure if this is necessary anymore, but it will stay there.
                
        
     }
@@ -31,18 +33,18 @@ public class Dash : MonoBehaviour
     void Update()
     {
               
-              if (dash)
+              if (dash)                                 // if button is pressed
             {
-                currentDashTime = 0;
+                currentDashTime = 0;                    // the time for the dash starts
             }
-            if (currentDashTime < maxDashTime)
+            if (currentDashTime < maxDashTime)          // while the dash time is lesser than what we set as the max time
             {
-                moveDirection = gun.transform.right * dashDistance;
-                currentDashTime += dashSpeedOnStop;
+                moveDirection = gun.transform.right * dashDistance;         //  move on the direction that the gun is facing * the distance we set
+                currentDashTime += dashSpeedOnStop;                         //  slow down on the stop
             }
-            else
+            else                                              // if the dash time is greater than what we set as max time
             {
-                moveDirection = Vector3.zero;
+                moveDirection = Vector3.zero;                  // doesnt  move
             }
            
         
@@ -50,10 +52,10 @@ public class Dash : MonoBehaviour
 
       
 
-       void OnDash(InputValue value)
+       void OnDash(InputValue value)                                    // same explanation as Fire script.
        {
         dash = value.isPressed;
-        controller.Move(moveDirection * Time.deltaTime * dashSpeed);
+        controller.Move(moveDirection * Time.deltaTime * dashSpeed);    // player moves on the direction we set, on the speed we set, in real time.
        }
 
 

@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class ItemSpawn : MonoBehaviour
 {
-    public static ItemSpawn instance;
-    [SerializeField] GameObject item;
+    //Script to spawn items on the game every given seconds.
 
-    private float timer;
-    private float maxTimer = 30f;
-    private bool isItSpawning;
+    public static ItemSpawn instance;           // we need to call this an instance and it has to be static (idk why, i just know we need to)
+    [SerializeField] GameObject item;           // the item we will spawn
 
-    private void Awake()
+    private float timer;                        // timer
+    private float maxTimer = 30f;               // max time (the time we want the item to wait until dropping)
+    private bool isItSpawning;                  // checking if it is spawning or not
+
+    private void Awake()                       
     {
         if (instance == null)
         {
-            instance = this;
+            instance = this;                          // this is the instance part which i dont understand properly
         }
         else
         {
@@ -23,7 +25,7 @@ public class ItemSpawn : MonoBehaviour
         }
     }
 
-    public static ItemSpawn GetInstance()
+    public static ItemSpawn GetInstance()               // also part of instance
     {
         return instance;
     }
@@ -31,41 +33,41 @@ public class ItemSpawn : MonoBehaviour
    
     void Update()
     {
-        SpawnTimer();
+        SpawnTimer();                                 // starts the timer method
 
-        if (!isItSpawning)
+        if (!isItSpawning)                            // if the timer stops (when it reaches the max timer we set)
         {
-            TriggerSpawnTimer();
+            TriggerSpawnTimer();                      // trigger it to start over
         }
     }
 
     void TriggerSpawnTimer()
     {
-        SpawnTimer();
+        SpawnTimer();                                 // trigger it to start over
     }
 
-    void SpawnTimer()
+    void SpawnTimer()                                // the timer method
     {
-        isItSpawning = true;
-        timer += Time.deltaTime;
-        if (timer >= maxTimer)
+        isItSpawning = true;                         // we declare that it is spawning, so it doesnt keep trying to trigger and restarting the timer every time
+        timer += Time.deltaTime;                     // timer starts
+        if (timer >= maxTimer)                       // if the timer reaches the max time
         {
-            Spawn();
-            ResetTimer();
-            isItSpawning = false;
+            Spawn();                                 // starts spawn method
+            ResetTimer();                            // starts reset timer method
+            isItSpawning = false;                    // declares that it isnt spawning anymore
         }
     }
 
-    void Spawn()
+    void Spawn()                                         // spawn method
     {
-        Debug.LogError("Item dropped");
-        GameObject newItem = Instantiate(item);
-        item.transform.position = new Vector3(Random.Range(-14, 0), 0, Random.Range(-3, 12));
-    }
+        Debug.LogError("Item dropped");                        //debug to tell me if something happened (in case i missed something)
+        GameObject newItem = Instantiate(item);                // instance of the item (still dont know much about it)
+        item.transform.position = new Vector3(Random.Range(-14, 0), 0, Random.Range(-3, 12));   // the item will be spawned on a random position between the x, y and z of the game
+    }                                                                                           // i had to check the position of the floor in game before set this
 
     void ResetTimer()
     {
-        timer = 0f;
+        timer = 0f;           //reset the timer
     }
 
 
