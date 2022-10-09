@@ -9,24 +9,45 @@ public class OtherEnemy : MonoBehaviour
 
     [SerializeField] GameObject player;
     public float enemyDamage = 15f;
-    private NavMeshAgent nav;
+    private NavMeshAgent agent;
+    private float closeEnough = 2f;
+    private float timeBetweenAttacks = 0;
 
     private void Start()
     {
-        nav = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
+
     }
     void Update()
     {
-        nav.SetDestination(player.transform.position);
-    }
+        agent.SetDestination(player.transform.position);
 
-    private void OnCollisionEnter(Collision collision)
+        agent.isStopped = false;
+        if (agent.remainingDistance <= closeEnough)
+        {
+            agent.isStopped = true;
+            Attack();
+        }
+
+    }
+  /*  private void OnCollisionEnter(Collision collision)
     {
        if (collision.gameObject.CompareTag("Player"))
        {
            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
        }
-
+         
         
+    }    */
+
+    private void Attack()
+    {
+                    timeBetweenAttacks += Time.deltaTime;
+        if (timeBetweenAttacks >= 2f)
+        {
+            player.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
+            timeBetweenAttacks = 0f;
+        }
     }
+
 }
