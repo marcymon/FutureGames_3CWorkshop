@@ -18,6 +18,19 @@ public class PlayerHealth : MonoBehaviour
         
     }
 
+
+    private void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+
+
+
+
     // all those methods work the same way: 
     // - Its made it public so other scripts could access it.
     // - It has an informative name, so we understand what it does.
@@ -25,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
     // more than one enemy but both gives a different amount of damage. instead of creating more than one method, we can simply inform how much damage it will give
     // on their own scripts.
     // - Inside the methods, we describe what we want to do with the information we receive.
-    
+
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;                          // decrease the hp by the amount the enemy informed
