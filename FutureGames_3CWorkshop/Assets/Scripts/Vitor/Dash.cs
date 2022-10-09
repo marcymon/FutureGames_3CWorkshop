@@ -25,7 +25,7 @@ public class Dash : MonoBehaviour
     void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();               // im not sure if this is necessary anymore, but it will stay there.
-               
+        
        
     }
 
@@ -44,7 +44,7 @@ public class Dash : MonoBehaviour
             }
             else                                              // if the dash time is greater than what we set as max time
             {
-                moveDirection = Vector3.zero;                  // doesnt  move
+                moveDirection = Vector3.zero;                
             }
            
         
@@ -57,6 +57,8 @@ public class Dash : MonoBehaviour
         dash = value.isPressed;
         controller.Move(moveDirection * Time.deltaTime * dashSpeed);    // player moves on the direction we set, on the speed we set, in real time.
        }
+
+  
 
 
 }
