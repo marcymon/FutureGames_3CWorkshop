@@ -62,7 +62,7 @@ public class ItemSpawn : MonoBehaviour
     {
         Debug.LogError("Item dropped");                        //debug to tell me if something happened (in case i missed something)
         GameObject newItem = Instantiate(item);                // instance of the item (still dont know much about it)
-        item.transform.position = new Vector3(Random.Range(-54, 43), 0, Random.Range(-47, 58));   // the item will be spawned on a random position between the x, y and z of the game
+        item.transform.position = new Vector3(Random.Range(-14, 0), 0, Random.Range(-3, 12));   // the item will be spawned on a random position between the x, y and z of the game
     }                                                                                           // i had to check the position of the floor in game before set this
 
     void ResetTimer()

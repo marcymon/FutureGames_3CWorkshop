@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 100f;
     public float currentHealth;
     public HealthBar healthBar;
-    private Shield shield;
+    public Shield shield;
 
     void Start()
     {
