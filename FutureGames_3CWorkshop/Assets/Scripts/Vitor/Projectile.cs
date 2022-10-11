@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     // script to say how the projectile will behave
 
    
-  public float force = 0.005f;
+  public float force = 700f;
 
   private void Start()
   {
