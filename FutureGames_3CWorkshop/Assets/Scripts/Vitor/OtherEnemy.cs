@@ -7,15 +7,16 @@ public class OtherEnemy : MonoBehaviour
 {
     // making the enemy follow player using navmesh
 
-    [SerializeField] GameObject player;
     public float enemyDamage = 15f;
     private NavMeshAgent agent;
     private float closeEnough = 2f;
     private float timeBetweenAttacks = 0;
+    private GameObject player;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        player = GameObject.FindWithTag("Player");
 
     }
     void Update()
