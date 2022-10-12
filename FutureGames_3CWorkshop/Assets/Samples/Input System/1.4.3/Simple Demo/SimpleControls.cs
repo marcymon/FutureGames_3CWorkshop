@@ -187,7 +187,7 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""578caa03-6827-4797-adfc-a59770c437fe"",
-                    ""path"": ""<Pointer>/delta"",
+                    ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
                     ""processors"": ""ScaleVector2(x=2,y=2)"",
                     ""groups"": """",
