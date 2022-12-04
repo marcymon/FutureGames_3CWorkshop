@@ -49,7 +49,7 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                     ""name"": ""look"",
                     ""type"": ""Value"",
                     ""id"": ""c60e0974-d140-4597-a40e-9862193067e9"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""expectedControlType"": ""Delta"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -187,9 +187,20 @@ public partial class @SimpleControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""578caa03-6827-4797-adfc-a59770c437fe"",
-                    ""path"": ""<Mouse>/position"",
+                    ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": ""ScaleVector2(x=2,y=2)"",
+                    ""groups"": """",
+                    ""action"": ""look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c60bd5d7-5818-4eab-b6f9-b451aa02cbdf"",
+                    ""path"": ""<XInputController>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
                     ""groups"": """",
                     ""action"": ""look"",
                     ""isComposite"": false,

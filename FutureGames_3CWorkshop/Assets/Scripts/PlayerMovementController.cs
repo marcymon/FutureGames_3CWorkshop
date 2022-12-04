@@ -49,9 +49,14 @@ public class PlayerMovementController : MonoBehaviour
         controller.Move(new Vector3(0, -gravityValue * dt, 0)); //gravity: the character constantly moves downwards, the CharacterController component handles collision
         
         float progression = 0;
+        if (rightStickPosition != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(rightStickPosition.x, rightStickPosition.y) * Mathf.Rad2Deg;
+            playerBody.rotation = Quaternion.Euler(0, angle - 90, 0);
+        }
 
         //What happens when the stick is pressed in a direction
-        if(leftStickPosition != Vector2.zero)
+        if (leftStickPosition != Vector2.zero)
         {
             isDecelerating = false;
 
@@ -110,10 +115,6 @@ public class PlayerMovementController : MonoBehaviour
     {
         rightStickPosition = lookValue.Get<Vector2>();
 
-        if(rightStickPosition != Vector2.zero)
-        {
-            float angle = Mathf.Atan2(rightStickPosition.x, rightStickPosition.y) * Mathf.Rad2Deg;
-            playerBody.rotation = Quaternion.Euler(0, angle - 90, 0);
-        }
+        
     }
 }
